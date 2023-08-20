@@ -4,7 +4,11 @@ plugins {
 }
 
 repositories {
-    maven("https://repository.derklaro.dev/releases/")
+    maven("https://repository.derklaro.dev/releases/") {
+        metadataSources {
+            artifact() //Look directly for artifact
+        }
+    }
 }
 
 dependencies {
